@@ -1,0 +1,2 @@
+copy this minesweeper https://www.101computing.net/minesweeper-in-javascript/
+Add confirmation communication to minesweeper

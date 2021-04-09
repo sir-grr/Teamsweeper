@@ -1,4 +1,9 @@
-//minesweeper game by 101computing.net - www.101computing.et/minesweeper-in-javascript/
+
+//Based on code by 101computing.net - www.101computing.et/minesweeper-in-javascript/
+//updated by Gilbert Reid for Treblig Inc
+
+console.log('running sweeper');
+document.getElementById('resetButton').addEventListener('click',generateGrid)
 var grid = document.getElementById("grid");
 var testMode = false; //Turn this variable to true to see where the mines are
 generateGrid();
@@ -7,9 +12,9 @@ function generateGrid() {
   //generate 10 by 10 grid
   grid.innerHTML="";
   for (var i=0; i<10; i++) {
-    row = grid.insertRow(i);
+    var row = grid.insertRow(i);
     for (var j=0; j<10; j++) {
-      cell = row.insertCell(j);
+      var cell = row.insertCell(j);
       cell.onclick = function() { clickCell(this); };
       var mine = document.createAttribute("data-mine");       
       mine.value = "false";             
@@ -83,3 +88,4 @@ function clickCell(cell) {
     checkLevelCompletion();
   }
 }
+
